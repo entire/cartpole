@@ -22,14 +22,14 @@ def evaluate_agent():
     model = PPO.load(model_path)
 
     # Create environment with render_mode
-    env = make_vec_env("CartPole-v1", n_envs=1, env_kwargs={"render_mode": "human"})
+    env = make_vec_env("CartPole-v1", n_envs=1)
     env = env.envs[0]  # Access the single environment
     logging.info("Environment created successfully.")
 
     # Evaluate the policy
     n_eval_episodes = 10
     logging.info(f"Evaluating policy over {n_eval_episodes} episodes.")
-    mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=n_eval_episodes)
+    mean_reward, std_reward = evaluate_policy(model, env, n_eval_episodes=n_eval_episodes, render=True)
     logging.info(f"Evaluation complete. Mean reward: {mean_reward:.2f} +/- {std_reward:.2f}")
 
     # Close the environment

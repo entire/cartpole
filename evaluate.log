@@ -10,3 +10,9 @@
 2025-01-06 17:03:19,104 - INFO - Loading model from 'models/ppo_cartpole'.
 2025-01-06 17:03:19,447 - INFO - Environment created successfully.
 2025-01-06 17:03:19,447 - INFO - Evaluating policy over 10 episodes.
+2025-01-08 08:45:21,526 - INFO - Starting evaluation process...
+2025-01-08 08:45:21,526 - INFO - Loading model from 'models/ppo_cartpole'.
+2025-01-08 08:45:21,831 - INFO - Environment created successfully.
+2025-01-08 08:45:21,831 - INFO - Evaluating policy over 10 episodes.
+2025-01-08 08:45:27,028 - INFO - Evaluation complete. Mean reward: 492.40 +/- 22.80
+2025-01-08 08:45:27,123 - INFO - Environment closed.

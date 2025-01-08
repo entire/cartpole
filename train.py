@@ -31,10 +31,6 @@ class TensorBoardCallback(BaseCallback):
 def train_agent():
     logging.info("Starting training process...")
     
-    # Set device to MPS if available
-    device = "mps" if torch.backends.mps.is_available() else "cpu"
-    logging.info(f"Using device: {device}")
-
     # Create environment
     env = make_vec_env("CartPole-v1", n_envs=1)
     logging.info("Environment created successfully.")
@@ -43,8 +39,7 @@ def train_agent():
     model = PPO("MlpPolicy", 
                 env, 
                 verbose=1, 
-                tensorboard_log=f"./tensorboard_logs/{timestamp}/",
-                device=device)
+                tensorboard_log=f"./tensorboard_logs/{timestamp}/")
     logging.info("Model initialized with PPO algorithm.")
 
     # Create custom TensorBoard callback
