@@ -1,0 +1,11 @@
+[project]
+name = "genesis-playground"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "genesis-world>=0.2.1",
+    "numpy>=1.26.4",
+    "torch>=2.5.1",
+]
